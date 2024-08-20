@@ -1,10 +1,14 @@
 const sumAll = function(minVal, maxVal) {
-    const difference = maxVal - minVal;
-    let sum = "";
+    const difference = Math.abs(minVal - maxVal);
+    let sum = minVal;
 
-    for (let i=0; i<difference-1; i++) {
-        return sum += i;
+    while (sum < difference) {
+        for (let i=0; i<difference; i++) {
+            return sum += i
+        }
     }
+    
+    return sum;
 };
 
 // Do not edit below this line
