@@ -1,13 +1,9 @@
 const sumAll = function(minVal, maxVal) {
-    const difference = Math.abs(minVal - maxVal);
-    let sum = minVal;
+    let sum = 0;
 
-    while (sum < difference) {
-        for (let i=0; i<difference; i++) {
-            return sum += i
-        }
+    for (let i = minVal; i<=maxVal; i++) {
+        sum += i;
     }
-    
     return sum;
 };
 
