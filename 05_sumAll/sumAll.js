@@ -1,10 +1,14 @@
-const sumAll = function(minVal, maxVal) {
-    let sum = 0;
+const sumAll = function (x, y) {
+  if (!Number.isInteger(x) || !Number.isInteger(y)) return "ERROR";
+  if (x < 0 || y < 0) return "ERROR";
+  if (y < x) [x, y] = [y, x];
 
-    for (let i = minVal; i<=maxVal; i++) {
-        sum += i;
-    }
-    return sum;
+  let sum = 0;
+
+  for (let i = x; i <= y; i++) {
+    sum += i;
+  }
+  return sum;
 };
 
 // Do not edit below this line
